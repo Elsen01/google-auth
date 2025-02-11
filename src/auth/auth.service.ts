@@ -5,14 +5,14 @@ import {AuthResponse} from "./types/auth.type";
 export class AuthService     {
     googleLogin(req): AuthResponse {
         if (!req.user) {
-            throw new Error('Giriş uğursuz oldu');
+            throw new Error('Login failed');
         }
 
         const { tokens, ...userData } = req.user;
 
         return {
             statusCode: 200,
-            message: 'Google-dan istifadəçi məlumatları',
+            message: 'User data from Google',
             data: {
                 user: userData,
                 tokens: {

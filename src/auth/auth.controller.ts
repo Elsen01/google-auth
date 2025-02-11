@@ -8,7 +8,7 @@ export class AuthController {
 
     @Get()
     getHello() {
-        return 'Auth səhifəsinə xoş gəlmisiniz';
+        return 'Welcome to Google Auth!';
     }
 
     @Get('auth/google')
